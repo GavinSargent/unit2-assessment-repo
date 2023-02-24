@@ -199,15 +199,37 @@ console.log(filteredFood)
 
 //CODE HERE
 
+// function filterByProperty (property, number, type){
+//     let foodFilterArr = foodArr.filter((obj) => {
+//         if(type === "above" && foodArr[index].property > number){ 
+//             return foodArr[index]
+//         } else if (type === "below"){
+//             return console.log(2)
+//         }
+//     })
+//     return foodFilterArr
+// }
+console.log("---------------")
+
 function filterByProperty (property, number, type){
-    let foodFilter = foodArr.filter((obj) => {
-        if(type === "above" && property > number){
-            return obj
-        } else if (type === "below" && property < number){
-            return obj
+    let foodFilterArr = foodArr.filter((obj, index) => {
+        if(type === "above" && property === "price" && foodArr[index].price > number){ 
+            return foodArr[index]
+        } else if (type === "above" && property === "rating" && foodArr[index].rating > number){
+            return 2
+        } else if (type === "above" && property === "popularity" && foodArr[index].popularity > number){
+            return 3
+        } else if (type === "below" && property === "price" && foodArr[index].price < number){
+            return 4
+        } else if (type === "below" && property === "rating" && foodArr[index].rating < number){
+            return 5
+        } else if (type === "below" && property === "popularity" && foodArr[index].popularity < number){
+            return 6
+        } else {
+            return "No results"
         }
     })
-    return foodFilter
+     return foodFilterArr
 }
 
 
@@ -221,5 +243,5 @@ function filterByProperty (property, number, type){
 
 //CODE HERE
 
-let filteredProperty = filterByProperty("price", 4, "above")
+let filteredProperty = filterByProperty("price", 1, "below")
 console.log(filteredProperty)
