@@ -35,8 +35,10 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, cur) => {
+    return acc + cur.price
+},0)
+// console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,7 +57,13 @@ const cart = [
 
 //CODE HERE
 
+function calcFinalPrice (cartTotal, couponValue, tax){
+    let taxTotal = cartTotal * (1 + tax)
+    let finalTotal = taxTotal - couponValue
+    return finalTotal
+}
 
+// console.log(calcFinalPrice(10, 2, .08))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +87,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+The customer object will include:
+ 1. a string for the customer's name because they want to know who they're serving 
+ 2. the number of people in the customer's party so they know how big of a table they will need
+3. if the customer is paying with a card so that they know if it's cash or card (this will a Boolean)
+4. the time the party will arrive so the that the restaurant will be prepared. This will be a time in military time
 */
 
 /*
@@ -88,3 +100,10 @@ const cart = [
 */
 
 //CODE HERE
+
+let person1 = {
+    name: "Betty",
+    partySize: 4,
+    payingWithCard: true,
+    arrivalTime: 1830 //I could also do a string "6:30 PM"
+}
