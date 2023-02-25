@@ -46,7 +46,7 @@ class Employee{
 //CODE HERE
 let empOne = new Employee("Jess", "weekday mornings, weekday afternoons")
 
-console.log(empOne)
+// console.log(empOne)
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -72,7 +72,7 @@ let empOneSchedule = empOne.getSchedule()
 
 let empTwo = {...empOne}
 empTwo.name = "Nick"
-console.log(empTwo)
+// console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -127,7 +127,7 @@ class Manager extends Employee {
 
 //CODE HERE
 
-let manager = new Manager("Winston", "weekday mornings, weekday afternoons", "Cece, " + "Schmidt")
+let manager = new Manager("Winston", "weekday mornings, weekday afternoons", "Cece," + "Schmidt")
 /*
     Call the `getEmployees` method on the
     `manager` object.  
@@ -146,7 +146,8 @@ manager.getEmployees()
 
 //CODE HERE 
 
-manager.addEmployee(" Coach")
+manager.addEmployee("Coach")
+
 
 
 /*

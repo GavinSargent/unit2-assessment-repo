@@ -60,7 +60,7 @@ class Ticket{
 //CODE HERE
 
 let firstTicket = new Ticket("pizza, " + "bread, " + "and soda", "7:03 PM", 575)
-console.log(firstTicket)
+// console.log(firstTicket)
 /*
     Call the `updateStatus` method on
     `firstTicket` passing in the string
@@ -71,4 +71,4 @@ console.log(firstTicket)
 
 firstTicket.updateStatus("cooking")
 
-console.log(firstTicket)
+// console.log(firstTicket)

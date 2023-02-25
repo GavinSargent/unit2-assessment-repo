@@ -262,5 +262,5 @@ console.log("---------------")
 
 //CODE HERE
 
-let filteredProperty = filterByProperty("popularity", 12, "above")
-console.log(filteredProperty)
+let filteredProperty = filterByProperty("popularity", 6, "above")
+// console.log(filteredProperty)
