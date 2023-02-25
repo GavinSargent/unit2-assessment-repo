@@ -190,7 +190,7 @@ console.log(filteredFood)
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -199,38 +199,57 @@ console.log(filteredFood)
 
 //CODE HERE
 
-// function filterByProperty (property, number, type){
-//     let foodFilterArr = foodArr.filter((obj) => {
-//         if(type === "above" && foodArr[index].property > number){ 
-//             return foodArr[index]
-//         } else if (type === "below"){
-//             return console.log(2)
-//         }
-//     })
-//     return foodFilterArr
-// }
-console.log("---------------")
-
-function filterByProperty (property, number, type){
-    let foodFilterArr = foodArr.filter((obj, index) => {
-        if(type === "above" && property === "price" && foodArr[index].price > number){ 
-            return foodArr[index]
-        } else if (type === "above" && property === "rating" && foodArr[index].rating > number){
-            return 2
-        } else if (type === "above" && property === "popularity" && foodArr[index].popularity > number){
-            return 3
-        } else if (type === "below" && property === "price" && foodArr[index].price < number){
-            return 4
-        } else if (type === "below" && property === "rating" && foodArr[index].rating < number){
-            return 5
-        } else if (type === "below" && property === "popularity" && foodArr[index].popularity < number){
-            return 6
+function filterByProperty(property, number, type){
+    let foodFilterArr = foodArr.filter((obj, index)=>{
+        if(type === "above"){
+            if (property === "price" && foodArr[index].price > number){
+                return (foodArr[index])
+            } else if (property === "rating" && foodArr[index].rating > number){
+                return (foodArr[index])
+            } else if (property === "popularity" && foodArr[index].popularity > number){
+                return (foodArr[index])
+            } else{
+                console.log("something is wrong")
+            }
+        }else if(type === "below"){
+            if (property === "price" && foodArr[index].price < number){
+                return (foodArr[index])
+            } else if (property === "rating" && foodArr[index].rating < number){
+                return (foodArr[index])
+            } else if (property === "popularity" && foodArr[index].popularity < number){
+                return (foodArr[index])
+            } else {
+                console.log("something is wrong")
+            }
         } else {
-            return "No results"
+            console.log("something is wrong")
         }
     })
-     return foodFilterArr
+    return foodFilterArr
 }
+
+console.log("---------------")
+
+// function filterByProperty (property, number, type){
+//     let foodFilterArr = foodArr.filter((obj, index) => {
+//         if(type === "above" && property === "price" && foodArr[index].price > number){ 
+//             return foodArr[index]
+//         } else if (type === "above" && property === "rating" && foodArr[index].rating > number){
+//             return 2
+//         } else if (type === "above" && property === "popularity" && foodArr[index].popularity > number){
+//             return 3
+//         } else if (type === "below" && property === "price" && foodArr[index].price < number){
+//             return 4
+//         } else if (type === "below" && property === "rating" && foodArr[index].rating < number){
+//             return 5
+//         } else if (type === "below" && property === "popularity" && foodArr[index].popularity < number){
+//             return 6
+//         } else {
+//             return "No results"
+//         }
+//     })
+//      return foodFilterArr
+// }
 
 
 
@@ -243,5 +262,5 @@ function filterByProperty (property, number, type){
 
 //CODE HERE
 
-let filteredProperty = filterByProperty("price", 1, "below")
+let filteredProperty = filterByProperty("popularity", 12, "above")
 console.log(filteredProperty)
